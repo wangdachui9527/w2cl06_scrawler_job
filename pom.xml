@@ -57,6 +57,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <!--simhash-->
+        <dependency>
+            <groupId>com.lou</groupId>
+            <artifactId>simhasher</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

@@ -108,7 +108,7 @@ public class JobProcessor implements PageProcessor {
 
     //initialDelay 初始化启动后等待1秒再执行
     //fixedDelay 上一次执行后多久再执行
-    @Scheduled(initialDelay = 1000,fixedDelay = 200*1000)
+//    @Scheduled(initialDelay = 1000,fixedDelay = 200*1000)
     public void process(){
         List<Pipeline> pipelines = new ArrayList<>();
         pipelines.add(springDataPipeline);
