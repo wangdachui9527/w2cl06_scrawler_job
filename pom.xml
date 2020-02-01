@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.0.2.RELEASE</version>
     </parent>
 
     <groupId>cn.w2cl</groupId>
@@ -57,12 +57,35 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <!--Elasticsearch-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <!--单元测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
         <!--simhash-->
         <dependency>
             <groupId>com.lou</groupId>
             <artifactId>simhasher</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <!--排除lucene的依赖，因为Elasticsearch中会用到最新的lucene-->
+            <exclusions>
+                <exclusion>
+                    <artifactId>lucene-core</artifactId>
+                    <groupId>org.apache.lucene</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <!--Elasticsearch客户端-->
+        <!--<dependency>-->
+            <!--<groupId>org.elasticsearch.client</groupId>-->
+            <!--<artifactId>transport</artifactId>-->
+            <!--<version>5.6.8</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 
