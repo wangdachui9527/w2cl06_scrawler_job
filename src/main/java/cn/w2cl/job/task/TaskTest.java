@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 @Component
 public class TaskTest {
-    @Scheduled(cron = "0/5 * * * * *")
+//    @Scheduled(cron = "0/5 * * * * *")
     public void test(){
         String str1 = readAllFile("D:/test/testin.txt");
         SimHasher hash1 = new SimHasher(str1);

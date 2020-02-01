@@ -1,6 +1,7 @@
 package cn.w2cl.job.service;
 
 import cn.w2cl.job.pojo.JobInfoField;
+import cn.w2cl.job.pojo.JobResult;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface JobInfoFieldService {
      * @param list
      */
     void saveAll(List<JobInfoField> list);
+
+    JobResult search(String salary, Integer page, String jobaddr, String keyword);
 }
