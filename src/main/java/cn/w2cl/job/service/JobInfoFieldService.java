@@ -8,7 +8,7 @@ import java.util.List;
  * @Authror 卫骏
  * @Date 2020/2/1 12:15
  */
-public interface JobInfoRepositoryService {
+public interface JobInfoFieldService {
 
     /**
      * 保存一条

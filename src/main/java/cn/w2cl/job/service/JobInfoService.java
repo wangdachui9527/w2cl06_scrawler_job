@@ -1,6 +1,7 @@
 package cn.w2cl.job.service;
 
 import cn.w2cl.job.pojo.JobInfo;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -22,4 +23,12 @@ public interface JobInfoService {
      * @return
      */
     List<JobInfo> findByJobInfo(JobInfo jobInfo);
+
+    /**
+     * 分页查询
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    Page<JobInfo> findByPage(int pageNo, int pageSize);
 }

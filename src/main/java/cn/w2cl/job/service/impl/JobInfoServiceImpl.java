@@ -5,6 +5,8 @@ import cn.w2cl.job.pojo.JobInfo;
 import cn.w2cl.job.service.JobInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,5 +41,11 @@ public class JobInfoServiceImpl implements JobInfoService {
         Example<JobInfo> example = Example.of(jobInfo);
         List<JobInfo> jobInfoList = this.jobInfoDao.findAll(example);
         return jobInfoList;
+    }
+
+    @Override
+    public Page<JobInfo> findByPage(int pageNo, int pageSize) {
+        Page<JobInfo> all = this.jobInfoDao.findAll(PageRequest.of(pageNo-1, pageSize));
+        return all;
     }
 }
